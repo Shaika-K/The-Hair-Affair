@@ -1,0 +1,23 @@
+The Hair Affair
+By Shaika Khan
+DSDN 112
+Victoria University of Wellington
+2015
+
+/*--IMPORTANT--*/
+
+/*
+
+The zooming animations on this website is unsupported by webkit as of this stage. Please use Internet Explorer or Mozilla FireFox.
+
+Also the images and gif used in this website is very large so it needs a computer with large memory to load. Please use a computer with bigger memory and empty browser.
+If you wish to view the website with the gif instead of an image you can try to change the background-image used by: 
+- Opeining up the html file
+- ctrl+f to search for: 	Images/main/1.jpg
+- Replace it with: 	Images/main/hair.gif
+- Save and reload.
+
+Sorry for any inconvinnience.
+Thank You.
+
+*/

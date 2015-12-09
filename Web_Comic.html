@@ -1,0 +1,784 @@
+    <!DOCTYPE html>
+    <html>
+        <head>
+		    <script src="script/jquery-1.11.3.min.js"></script>
+		    <script src="script/jquery.browser.min.js"></script>            
+		    <link rel="stylesheet" href="css/animate.css" type="text/css">
+			<script>
+ 			$(document).ready(function(){			
+				if($.browser.webkit){
+  				alert("Website animations not supported on Chrome and Safari! Please use IE or Firefox.);
+				}
+			}
+			</script>                    
+			 <script> /*JQUERY*/
+            $(document).ready(function(){			
+		
+			/* dim Background*/             
+			$(".chapter1, .chapter2, .chapter3, .chapter4, .chapter5, .chapter6, .chapter7, .chapter8, .poster").hover(function(){
+			$("#dim").css("background-color", "rgba(0,0,0,0.7)");
+			}, function(){
+			$("#dim").css("background-color", "rgba(0,0,0,0.0)");
+			});
+			
+            $(".click1, .click2, .click3, .click4, .click5, .click6, .click7, .click8, .click9").hide();                
+            /* highlights selected story*/
+            /*story 1*/
+            $("#c1").click(function() {
+                $('.click2, .click3, .click4, .click5, .click6, .click7, .click8, .click9').hide();
+            });
+            $("#c1").click(function() {
+                $('.click1').show();
+            });
+            $("#dim, .chapter1").click(function() {
+                $('.click1').hide();
+            });
+            
+            /*story 2*/
+            $("#c2").click(function() {
+                $('.click1, .click3, .click4, .click5, .click6, .click7, .click8, .click9').hide();
+            });
+            $("#c2").click(function() {
+                $('.click2').show();
+            });
+            $("#dim, .chapter2").click(function() {
+                $('.click2').hide();
+            });           
+                
+            /*story 3*/
+            $("#c3").click(function() {
+                $('.click2, .click1, .click4, .click5, .click6, .click7, .click8, .click9').hide();
+            });
+            $("#c3").click(function() {
+                $('.click3').show();
+            });
+            $("#dim, .chapter3").click(function() {
+                $('.click3').hide();
+            });
+                            
+            /*story 4*/
+            $("#c4").click(function() {
+                $('.click2, .click3, .click1, .click5, .click6, .click7, .click8, .click9').hide();
+            });
+            $("#c4").click(function() {
+                $('.click4').show();
+            });
+            $("#dim, .chapter4").click(function() {
+                $('.click4').hide();
+            });
+                           
+            /*story 5*/
+            $("#c5").click(function() {
+                $('.click2, .click3, .click4, .click1, .click6, .click7, .click8, .click9').hide();
+            });
+            $("#c5").click(function() {
+                $('.click5').show();
+            });
+            $("#dim, .chapter5").click(function() {
+                $('.click5').hide();
+            });
+          
+            /*story 6*/
+            $("#c6").click(function() {
+                $('.click2, .click3, .click4, .click5, .click1, .click7, .click8, .click9').hide();
+            });
+            $("#c6").click(function() {
+                $('.click6').show();
+            });
+            $("#dim, .chapter6").click(function() {
+                $('.click6').hide();
+            });
+            
+            /*story 7*/
+            $("#c7").click(function() {
+                $('.click2, .click3, .click4, .click5, .click6, .click1, .click8, .click9').hide();
+            });
+            $("#c7").click(function() {
+                $('.click7').show();
+            });
+            $("#dim, .shapter7").click(function() {
+                $('.click7').hide();
+            });
+                           
+            /*story 8*/
+            $("#c8").click(function() {
+                $('.click2, .click3, .click4, .click5, .click6, .click7, .click1, .click9').hide();
+            });
+            $("#c8").click(function() {
+                $('.click8').show();
+            });
+            $("#dim, .chapter8").click(function() {
+                $('.click8').hide();
+            });
+                            
+            /*poster*/
+            $("#pos").click(function() {
+                $('.click2, .click3, .click4, .click5, .click6, .click7, .click8, .click1').hide();
+            });
+            $("#pos").click(function() {
+                $('.click9').show();
+            });
+            $("#dim, .poster").click(function() {
+                $('.click9').hide();
+            });
+                  
+            });
+            </script>
+            
+            <script src="script/wow.js"></script>
+              <script>/*WOW.js*/
+              new WOW().init();
+              </script>
+            
+            <script src="script/jquery.zoomooz.min.js"></script>  <!--DOES NOT WORK ON CHROME!-->         
+			
+			<script src="script/jquery.localScroll.min.js" type="text/javascript"></script> 
+			<script src="script/jquery.scrollTo.min.js" type="text/javascript"></script> 
+            
+			<script>/*localScroll.js*/
+				$(document).ready(function() {
+				 $('#nav').localScroll();
+				});
+			</script>
+            
+            <style>
+               body {
+                    background-color: black;	
+                    padding: 0%;
+                    margin: 0%;
+		    	   float:right;
+                }
+                
+                /*MAIN IMAGES*/
+				#main{
+					position: absolute;
+					z-index: -1;
+					left: 16.5%;
+                    bottom:0%;
+					top:0%;
+					width: 67%;
+					padding-bottom:167.5%;
+					/*height:326%;*/			
+					content: "";
+					display: block;										
+					background-image: url("Images/main/1.jpg");		/*please replace line if browser can handle gif size --> background-image: url("Images/main/hair.gif");*/
+					background-repeat: no-repeat;
+					background-size: contain;         
+					background-position: center top;	
+					}
+                
+                #dim{
+                    position:absolute;
+                    z-index:1;
+                    margin-right:16.8%;
+                    bottom:0%;
+                    display:block;
+                    padding:60%;                    
+                    content:"";
+                    background-color:none;
+                }
+				
+                /*Chapters wrapper*/
+                .chapters{
+                    position: relative;
+                    z-index: 3;
+                    margin-top:23%;
+					margin-left: 16.8%;
+					margin-right: 16.8%;
+					margin-bottom : 0%;
+                    bottom:0%;
+					background-color: none;
+                    padding-bottom:5%;
+                    clear:both;
+                }
+                
+				
+				/*Instructions*/
+				.instructions{                    
+					z-index: 13;
+					font-family: MV Boli;
+					font-size: 1.7vw;  /*120%*/
+					color: white;
+                    margin-top: 47%;
+                    margin-left: 36%;
+                    margin-right: 35%;
+                    text-align: center;
+                    /*background-color: rgba(0,0,0, 0.3);*/
+                    text-shadow: 0 0 11px black;
+				}
+                
+                /*story links text wrapper*/
+                .stories{                    
+                    margin-top:1.5%;                    
+					margin-left: 36%;
+					margin-right: 35%;
+					/*background-color: red;*/	
+					padding-left:2%;	
+					padding-right:2%;
+					display: block;
+					text-align: center;
+					vertical-align: middle;
+					border: 3%;					
+                    z-index: 13;
+                    clear:both;
+                }
+                
+                /*Chapters*/
+                .chapter1{     
+                    position:absolute;
+                    float: left;
+					z-index: 3;					
+					margin-top:19%;                
+					margin-left:16%;
+                    box-shadow: 3px 3px 5px grey;
+                }
+				.chapter2{     
+                    position:absolute;
+                    float: left;
+					z-index: 3;				
+					margin-top:42%;          
+					margin-left:20%;
+                    box-shadow: 3px 3px 5px grey;
+                }
+				.chapter3{           
+                    position:absolute;
+                    float: left;
+					z-index: 3;				
+					margin-top:62%;          
+					margin-left:20%;
+                    box-shadow: 3px 3px 5px grey;
+                }
+				.chapter4{                    
+                    position:absolute;
+                    float: left;
+					z-index: 3;				
+					margin-top:90%;          
+					margin-left:38%;
+                    box-shadow: 3px 3px 5px grey;
+                }
+				.chapter5{                    
+                    position:absolute;
+                    float: left;
+					z-index: 3;				
+					margin-top:76%;          
+					margin-left:53%;
+                    box-shadow: 3px 3px 5px grey;
+                }				
+				.chapter6{                    
+                    position:absolute;
+                    float: left;
+					z-index: 3;				
+					margin-top:58%;          
+					margin-left:63%; 
+                    box-shadow: 3px 3px 5px grey;
+                }
+				.chapter7{                    
+                    position:absolute;
+                    float: left;
+					z-index: 3;				
+					margin-top:39%;          
+					margin-left:64%;  
+                    box-shadow: 3px 3px 5px grey;
+                }
+				.chapter8{                    
+                    position:absolute;
+                    float: left;
+					z-index: 3;				
+					margin-top:20%;          
+					margin-left:71%;
+                    box-shadow: 3px 3px 5px grey;
+                }
+				.poster{                                       
+                    float: left;
+					z-index: 3;				
+					margin-top:7%;          
+					margin-left:76%; 
+                    box-shadow: 3px 3px 5px grey;
+                }                
+                                               
+                /*Floating Images*/
+                .bigbow{
+                    position:absolute;
+                        float: left;
+                        z-index: 2;	
+                        max-width:25%;
+                        margin-top:-90%;          
+                        display:inline;
+                        margin-left:-82%;
+                        overflow: hidden;                    
+                        animation-iteration-count: infinite;
+                        -moz-animation-iteration-count: infinite;
+                        -webkit-animation-iteration-count: infinite;
+                        animation-duration: 3s;
+                        -moz-animation-duration: 3s;
+                        -webkit-animation-duration: 3s;
+                }   
+                .bow{
+                     position:absolute;
+                    float: left;
+					z-index: 2;				
+					margin-top:-75%;          
+					display:inline;
+                    margin-left:-4%;
+                    overflow: hidden;
+                    animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-iteration-count: infinite; 
+                    animation-duration: 2s;
+					-moz-animation-duration: 2s;
+					-webkit-animation-duration: 2s;
+                }
+                .spray2{                    
+                    position:absolute;
+                    float: left;
+					z-index: 2;
+                    max-width:25%;
+					margin-top:-50%;          
+					display:inline;
+                    margin-left:-85%;
+                    overflow: hidden; 
+                    animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-iteration-count: infinite;  
+                    animation-duration: 2s;
+					-moz-animation-duration: 2s;
+					-webkit-animation-duration: 2s;
+                }
+                .bands{ 
+                    position:absolute;
+                    float: left;
+					z-index: 2;				
+					max-width:25%;
+                    margin-top:-35%;          
+					display:inline;
+                    margin-left:2%;
+                    overflow: hidden;                  					animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-iteration-count: infinite;  
+                    animation-duration: 3s;
+					-moz-animation-duration: 3s;
+					-webkit-animation-duration: 3s;
+                }
+                .brush{                    
+                    position:absolute;
+                    float: left;
+					z-index: 2;				
+					max-width:25%;
+                    margin-top:-15%;          
+					display:inline;
+                    margin-left:-83%;
+                    overflow: hidden;                                   
+					animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-iteration-count: infinite;  
+                    animation-duration: 3s;
+					-moz-animation-duration: 3s;
+					-webkit-animation-duration: 3s;
+                }
+                .smallbow{   
+                    position:absolute;
+                    float: left;
+					z-index: 2;	
+                    max-width:25%;
+					margin-top:10%;          
+					display:inline;
+                    margin-left:1%;
+                    overflow: hidden;                                   animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-iteration-count: infinite;  
+                    animation-duration: 3s;
+					-moz-animation-duration: 3s;
+					-webkit-animation-duration: 3s;
+                }
+                .comb{                    
+                    position:absolute;
+                    float: left;
+					z-index: 2;
+                    max-width:23%;
+                    margin-top:33%;          
+					display:inline;
+                    margin-left:-83%;
+                    overflow: hidden;                                   animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-iteration-count: infinite;  
+                    animation-duration: 2s;
+					-moz-animation-duration: 2s;
+					-webkit-animation-duration: 2s;                    
+                }
+                .spray{                    
+                    position:absolute;
+                    float: left;
+					z-index: 2;
+                    max-width:25%;
+					margin-top:47%;          
+					display:inline;
+                    margin-left:1%;
+                    overflow: hidden;                                   animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-iteration-count: infinite;  
+                    animation-duration: 2s;
+					-moz-animation-duration: 2s;
+					-webkit-animation-duration: 2s;
+                }                           
+                
+                /*story link text*/
+                #c1{
+					z-index: 13;
+					font-family: MV Boli;
+					font-size: 1.2vw;  /*120%*/
+					font-weight:bold;
+					color: white;                   
+                    margin:0%;
+                    text-align: center;
+                    text-shadow: 0 0 11px black;
+					text-decoration: none;
+					margin-bottom: 1%;
+					
+                }
+                #c2{
+                z-index: 2;
+					font-family: MV Boli;
+					font-size: 1.2vw;  /*120%*/
+					color: white;
+                    margin:0%;                   
+                    text-align: center;
+                    text-shadow: 0 0 11px black;
+					text-decoration: none;
+					margin-bottom: 1%;
+					font-weight:bold;
+                }
+                #c3{
+                z-index: 2;
+					font-family: MV Boli;
+					font-size: 1.2vw;  /*120%*/
+					color: white;
+                    margin:0%;                 
+                    text-align: center;
+                    text-shadow: 0 0 11px black;
+					text-decoration: none;
+					margin-bottom: 1%;
+					font-weight:bold;
+                }
+                #c4{
+                z-index: 2;
+					font-family: MV Boli;
+					font-size: 1.2vw;  /*120%*/
+					color: white;
+                    margin:0%;                 
+                    text-align: center;
+                    text-shadow: 0 0 11px black;
+					text-decoration: none;
+					margin-bottom: 1%;
+					font-weight:bold;
+                }
+                #c5{
+                z-index: 2;
+					font-family: MV Boli;
+					font-size: 1.2vw;  /*120%*/
+					color: white;
+                    margin:0%;                 
+                    text-align: center;
+                    text-shadow: 0 0 11px black;
+					text-decoration: none;
+					margin-bottom: 1%;
+					font-weight:bold;
+                }
+                #c6{
+                z-index: 2;
+					font-family: MV Boli;
+					font-size: 1.2vw;  /*120%*/
+					color: white;
+                    margin:0%;                 
+                    text-align: center;
+                    text-shadow: 0 0 11px black;
+					text-decoration: none;
+					margin-bottom: 1%;
+					font-weight:bold;
+                }
+                #c7{
+                z-index: 2;
+					font-family: MV Boli;
+					font-size: 1.2vw;  /*120%*/
+					color: white;
+                    margin:0%;                 
+                    text-align: center;
+                    text-shadow: 0 0 11px black;
+					text-decoration: none;
+					margin-bottom: 1%;
+					font-weight:bold;
+                }
+                #c8{
+                z-index: 2;
+					font-family: MV Boli;
+					font-size: 1.2vw;  /*120%*/
+					color: white;
+                    margin:0%;                   
+                    text-align: center;
+                    text-shadow: 0 0 11px black;	
+					text-decoration: none;
+					margin-bottom: 1%;
+					font-weight:bold;					
+                }
+				#pos{
+                z-index: 2;
+					font-family: MV Boli;
+					font-size: 1.2vw;  /*120%*/
+					color: white;
+                    margin:0%;                   
+                    text-align: center;
+                    text-shadow: 0 0 11px black;			
+					text-decoration: none;
+					margin-bottom: 1%;
+					font-weight:bold;					
+                }
+                #c1:hover, #c2:hover, #c3:hover, #c4:hover, #c5:hover, #c6:hover, #c7:hover, #c8:hover, #pos:hover{
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+                }
+                
+                .click1{                    
+                    position:absolute;
+                    float: left;
+					z-index: 2;
+                    max-width:20%;
+					margin-top:5%;          
+					display:block;
+                    margin-left:19%;
+                    overflow: hidden;                       
+					animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-iteration-count: infinite;  
+                    animation-duration: 2s;
+					-moz-animation-duration: 2s;
+					-webkit-animation-duration: 2s;
+                    
+                }
+                .click2{                    
+                    position:absolute;
+                    float: left;
+					z-index: 2;
+                    max-width:20%;
+					margin-top:20%;          
+					display:block;
+                    margin-left:22%;
+                    overflow: hidden;                       
+					animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-iteration-count: infinite;  
+                    animation-duration: 2s;
+					-moz-animation-duration: 2s;
+					-webkit-animation-duration: 2s;
+                    
+                }
+                .click3{                    
+                    position:absolute;
+                    float: left;
+					z-index: 2;
+                    max-width:20%;
+					margin-top:34%;          
+					display:block;
+                    margin-left:22%;
+                    overflow: hidden;                       
+					animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-iteration-count: infinite;  
+                    animation-duration: 2s;
+					-moz-animation-duration: 2s;
+					-webkit-animation-duration: 2s;
+                    
+                }
+                .click4{                    
+                    position:absolute;
+                    float: left;
+					z-index: 2;
+                    max-width:21%;
+					margin-top:52%;          
+					display:block;
+                    margin-left:39%;
+                    overflow: hidden;                       
+					animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-iteration-count: infinite;  
+                    animation-duration: 2s;
+					-moz-animation-duration: 2s;
+					-webkit-animation-duration: 2s;
+                    
+                }
+                .click5{                    
+                    position:absolute;
+                    float: left;
+					z-index: 2;
+                    max-width:21%;
+					margin-top:43%;          
+					display:block;
+                    margin-left:49%;
+                    overflow: hidden;                       
+					animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-iteration-count: infinite;  
+                    animation-duration: 2s;
+					-moz-animation-duration: 2s;
+					-webkit-animation-duration: 2s;
+                    
+                }
+                .click6{                    
+                    position:absolute;
+                    float: left;
+					z-index: 2;
+                    max-width:21%;
+					margin-top:31%;          
+					display:block;
+                    margin-left:55%;
+                    overflow: hidden;                       
+					animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-iteration-count: infinite;  
+                    animation-duration: 2s;
+					-moz-animation-duration: 2s;
+					-webkit-animation-duration: 2s;
+                    
+                }
+                .click7{                    
+                    position:absolute;
+                    float: left;
+					z-index: 2;
+                    max-width:21%;
+					margin-top:18%;          
+					display:block;
+                    margin-left:56%;
+                    overflow: hidden;                       
+					animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-iteration-count: infinite;  
+                    animation-duration: 2s;
+					-moz-animation-duration: 2s;
+					-webkit-animation-duration: 2s;
+                    
+                }
+                .click8{                    
+                    position:absolute;
+                    float: left;
+					z-index: 2;
+                    max-width:15%;
+					margin-top:5%;          
+					display:block;
+                    margin-left:61%;
+                    overflow: hidden;                       
+					animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-iteration-count: infinite;  
+                    animation-duration: 2s;
+					-moz-animation-duration: 2s;
+					-webkit-animation-duration: 2s;
+                    
+                }
+                .click9{                    
+                    position:absolute;
+                    float: left;
+					z-index: 2;
+                    max-width:17%;
+					margin-top:-10%;          
+					display:block;
+                    margin-left:65%;
+                    overflow: hidden;                       
+					animation-iteration-count: infinite;
+					-moz-animation-iteration-count: infinite;
+					-webkit-animation-iteration-count: infinite;  
+                    animation-duration: 2s;
+					-moz-animation-duration: 2s;
+					-webkit-animation-duration: 2s;
+                    
+                }
+				
+				
+            </style>       
+
+            <title>The Hair Affair</title> 
+        </head>
+
+        <body >         
+            
+            <!--Background music-->
+            <div>
+		      <audio autoplay loop>
+                <source src="Podington Bear - Stars Are Out.mp3" type="audio/mpeg">	<!-- Stars Are Out by Podington Bear is licensed under a Attribution-NonCommercial 3.0 International License. For more information please visit: http://freemusicarchive.org/music/Podington_Bear/Daydream/Stars_Are_Out_1389-->
+                Your browser does not support the audio element.
+		      </audio>
+	       </div>
+            
+            <!--Main Background Image-->
+            <div id="main">
+            <div id="dim">            
+            </div>
+            </div>            
+			            
+            <!--Instructions-->
+            <h3 class="instructions animated bounceIn">Choose a story to read! <br> Click on the comic to zoom in and then click out to return!<br>(TIP: Hover over the comic to dim the lights!)</h3>
+            
+            <!--Story links-->
+            <div id= "nav" class="stories">
+				<a id = "c1" href= "#ch1"> Story 1 </a>
+				<a id = "c2" href= "#ch2"> Story 2 </a>
+				<a id = "c3" href= "#ch3"> Story 3 </a>
+				<a id = "c4" href= "#ch4"> Story 4 </a>
+				<a id = "c5" href= "#ch5"> Story 5 </a>
+				<a id = "c6" href= "#ch6"> Story 6 </a>
+				<a id = "c7" href= "#ch7"> Story 7 </a>
+				<a id = "c8" href= "#ch8"> Story 8 </a>
+				<a id = "pos" href="#postr"> Download Poster </a>
+            </div>
+            
+            <!--Comic-->
+            <div class = "chapters" id ="chapters"> 
+               <div id="chapters2" class = "chapters2 zoomViewport zoomTarget zoomNotClickable">   				            
+					<a id="chap1"><img id="ch1" src="Images/Chapters/p1.jpg" class="chapter1 wow rollIn zoomTarget" alt="Chapter 1" width = "12.06%" border="0" data-closeclick="true" data-targetsize="0.67" data-duration="600"></a>
+                </div>
+			   <div class = "chapters2 zoomViewport zoomTarget zoomNotClickable"> 
+					<a id="chap2"><img id="ch2" src="Images/Chapters/p2.jpg" class="chapter2 wow rollIn zoomTarget" alt="Chapter 2" width = "12.06%" border="0" data-closeclick="true" data-targetsize="0.67" data-duration="600"></a>	
+               </div>
+			   <div class = "chapters2 zoomViewport zoomTarget zoomNotClickable"> 
+					<a id="chap3"><img id="ch3" src="Images/Chapters/p3.jpg" class="chapter3 wow rollIn zoomTarget" alt="Chapter 3" width = "12.06%" border="0" data-closeclick="true" data-targetsize="0.67" data-duration="600"></a>	
+               </div>
+			   <div class = "chapters2 zoomViewport zoomTarget zoomNotClickable"> 
+					<a id="chap4"><img id="ch4" src="Images/Chapters/p4.jpg" class="chapter4 wow rollIn zoomTarget" alt="Chapter 4" width = "12.06%" border="0" data-closeclick="true" data-targetsize="0.67" data-duration="600"></a>	
+			   </div>
+			   <div class = "chapters2 zoomViewport zoomTarget zoomNotClickable"> 
+					<a id="chap5"><img id="ch5" src="Images/Chapters/p5.jpg" class="chapter5 wow rollIn zoomTarget" alt="Chapter 5" width = "12.06%" border="0" data-closeclick="true" data-targetsize="0.67" data-duration="600"></a>	
+               </div>
+			   <div class = "chapters2 zoomViewport zoomTarget zoomNotClickable"> 
+					<a id="chap6"><img id="ch6" src="Images/Chapters/p6.jpg" class="chapter6 wow rollIn zoomTarget" alt="Chapter 6" width = "12.06%" border="0" data-closeclick="true" data-targetsize="0.67" data-duration="600"></a>	
+               </div>
+			   <div class = "chapters2 zoomViewport zoomTarget zoomNotClickable"> 
+					<a id="chap7"><img id="ch7" src="Images/Chapters/p7.jpg" class="chapter7 wow rollIn zoomTarget" alt="Chapter 7" width = "12.06%" border="0" data-closeclick="true" data-targetsize="0.67" data-duration="600"></a>	
+               </div>
+			   <div class = "chapters2 zoomViewport zoomTarget zoomNotClickable"> 
+					<a id="chap8"><img id="ch8" src="Images/Chapters/p8.jpg" class="chapter8 wow rollIn zoomTarget" alt="Chapter 8" width = "12.06%" border="0" data-closeclick="true" data-targetsize="0.67" data-duration="600"></a>	
+			   </div>
+			   <div class = "chapters2 zoomViewport zoomTarget zoomNotClickable"> 
+					<a id="post" href="Images/Chapters/poster.jpg" download><img id="postr" src="Images/Chapters/poster.jpg" class="poster wow rollIn zoomTarget" alt="Poster" width = "16.06%" border="0" data-closeclick="true" data-targetsize="0.67" data-duration="600"></a>	
+               </div>
+                </div>
+			   
+			   <!--Floation background images-->
+			   <img class="bigbow animated swing" src="Images/background/bigbow.png" alt="Floating image of ribbons"> 
+               <img class="bow animated pulse" id="bow" src="Images/background/bow.png" alt="Floating image of bow" width = "37%">
+            <img class="spray2 animated pulse" src="Images/background/spray.png" alt="Floating image of hairspray" width = "37%">
+			   <img class="bands animated rubberBand" src="Images/background/bands.png" alt="Floating image of hairbands" width = "37%">
+            <img class="brush animated jello"  src="Images/background/brush.png" alt="Floating image of hairbrush" width = "37%">
+               <img class="smallbow animated swing" src="Images/background/smallbow.png" alt="Floating image of ribbons" width = "37%"> 
+            <img class="comb animated tada" src="Images/background/comb.png" alt="Floating image of comb" width = "37%">
+            <img class="spray animated pulse" src="Images/background/spray.png" alt="Floating image of hairspray" width = "37%">
+            
+            <!--Clicking indicator-->            
+            <img class="click1 animated pulse" src="Images/clicks/click1.png" alt="Click indicator">
+            <img class="click2 animated pulse" src="Images/clicks/click1.png" alt="Click indicator">
+            <img class="click3 animated pulse" src="Images/clicks/click1.png" alt="Click indicator">
+            <img class="click4 animated pulse" src="Images/clicks/click2.png" alt="Click indicator">
+            <img class="click5 animated pulse" src="Images/clicks/click2.png" alt="Click indicator">
+            <img class="click6 animated pulse" src="Images/clicks/click2.png" alt="Click indicator">
+            <img class="click7 animated pulse" src="Images/clicks/click2.png" alt="Click indicator">
+            <img class="click8 animated pulse" src="Images/clicks/click3.png" alt="Click indicator">
+            <img class="click9 animated pulse" src="Images/clicks/click4.png" alt="Click indicator">
+
+        </body>
+
+    </html>
